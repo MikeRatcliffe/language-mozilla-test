@@ -8,7 +8,7 @@
     "grammar",
     "syntax"
   ],
-  "repository": "https://github.com/MikeRatcliffe/language-mozilla-test/",
+  "repository": "https://github.com/MikeRatcliffe/language-mozilla-test",
   "license": "MIT",
   "engines": {
     "atom": ">=0.196.0 <2.0.0"
