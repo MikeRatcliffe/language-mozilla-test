@@ -1,0 +1,73 @@
+fileTypes: [
+	"test"
+]
+name: "Mozilla Test Output"
+patterns: [
+	{
+		match: ".*TEST-START.*|.*TEST-END.*|\\bTEST-KNOWN-FAIL\\b"
+		name: "entity.name.function"
+	}
+	{
+		match: "\\bTEST-INFO\\b"
+		name: "string"
+	}
+	{
+		match: "^\\s*\\b\\d?\\d:\\d\\d[:.]\\d\\d\\b|\\bINFO -"
+		name: "comment"
+	}
+	{
+		match: "\\bEMITTING:"
+		name: "constant.numeric.css"
+	}
+	{
+		match: "\\bDBG-FRONTEND:"
+		name: "support.function.function.js"
+	}
+	{
+		match: "WARNING:?"
+		name: "keyword"
+	}
+	{
+		match: "(\\+\\+|--).*"
+		name: "comment"
+	}
+	{
+		match: "\\bJavaScript strict warning:.*"
+		name: "keyword"
+	}
+	{
+		match: "\\[(JavaScript Warning:.+)\\]"
+		captures:
+			"1":
+				name: "keyword"
+	}
+	{
+		match: "(.*)(TEST-PASS)(.*)"
+		captures:
+			"1":
+				name: "comment"
+			"2":
+				name: "entity.name.function"
+			"3":
+				name: "text"
+	}
+	{
+		match: "(.*)(TEST-INFO)(.*exceptions.*)"
+		captures:
+			"1":
+				name: "comment"
+			"2":
+				name: "string"
+			"3":
+				name: "text"
+	}
+	{
+		match: ".*\\b[Ee]xception\\b.*"
+		name: "invalid"
+	}
+	{
+		match: ".*(JavaScript Error:(?! \"The character encoding)|TEST-UNEXPECTED-FAIL|TEST-UNEXPECTED-PASS|DEBUG:|Stack trace:|Stack:|\"debugger\" keyword|doesn't exist:|console.error).*"
+		name: "invalid"
+	}
+]
+scopeName: "text.mozillatest"
