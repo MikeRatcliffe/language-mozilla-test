@@ -4,7 +4,7 @@ fileTypes: [
 name: "Mozilla Test Output"
 patterns: [
 	{
-		match: ".*TEST-START.*|.*TEST-END.*|\\bTEST-KNOWN-FAIL\\b"
+		match: ".*TEST-START.*|.*TEST-END.*|\\bTEST-KNOWN-FAIL\\b|SUITE-START|SUITE-END"
 		name: "entity.name.function"
 	}
 	{
@@ -17,11 +17,11 @@ patterns: [
 	}
 	{
 		match: "\\bEMITTING:"
-		name: "constant.numeric.css"
+		name: "constant.numeric"
 	}
 	{
 		match: "\\bDBG-FRONTEND:"
-		name: "support.function.function.js"
+		name: "support.function"
 	}
 	{
 		match: "WARNING:?"

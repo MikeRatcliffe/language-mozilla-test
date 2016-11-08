@@ -5,3 +5,7 @@ This repository contains the package needed to add highlighting to Mozilla's tes
 Simply redirect the test output to a file with the .test extension and it will be automatically highighted.
 
 Alternatively, click the language at the bottom right of the Atom window and select "Mozilla Test Output."
+
+### Known issues
+
+  - Items with the class "invalid" show as unhighlighted in the minimap.
